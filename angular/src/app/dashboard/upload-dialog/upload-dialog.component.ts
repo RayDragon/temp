@@ -50,7 +50,13 @@ export class UploadDialogComponent implements OnInit, AfterViewInit {
    * Using #fileUpload id open the file explorer to upload file
    */
   openFileExplorer() {
+    let el: any = document.getElementById('fileUpload');
+    el.oninput = (x:any)=>{
+      this.file = x.target.files[0];
+    }
+    el.click();
   }
+
 
   fileDrop(fileUploadEvent: DragEvent) {
     fileUploadEvent.preventDefault();
@@ -73,7 +79,9 @@ export class UploadDialogComponent implements OnInit, AfterViewInit {
    * if userResponse is false => close the dialog
   */
   closeDialog(userResponse) {
-
+    if(userResponse)
+    return this.dialogRef.close(this.file);
+    this.dialogRef.close();
   }
 
 }

@@ -20,7 +20,7 @@
                     <!-- Username field -->
                     <mat-form-field appearance="outline">
                         <mat-label>User Name</mat-label>
-                        <input matInput id="userName">
+                        <input formControlName="userName" matInput id="userName">
                         <mat-error *ngIf="userName.invalid && (userName.dirty || userName.touched)">
                           <ng-container *ngIf="userName.errors?.required">
                             Enter username
@@ -43,7 +43,7 @@
                     <!-- Password field -->
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput [type]="hide ? 'text' : 'password'" id='password'>
+                        <input  formControlName="password" matInput [type]="hide ? 'text' : 'password'" id='password'>
                         <button mat-icon-button matSuffix (click)="hide=! hide" [attr.aria-label]=" 'Hide password' "
                             [attr.aria-pressed]="hide ">
                             <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>

@@ -1,130 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite errors="0" failures="0" file="holiday/tests.py" name="holiday.tests.PageHitTests-20210629135632" skipped="0" tests="17" time="0.094" timestamp="2021-06-29T13:56:33">
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="81" name="test_admin_login_view" time="0.012" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[/home/user/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1423: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2018-01-05 00:00:00) while time zone support is active.
-  RuntimeWarning)
-/home/user/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1423: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-01-05 00:00:00) while time zone support is active.
-  RuntimeWarning)
-/home/user/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1423: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-01-07 00:00:00) while time zone support is active.
-  RuntimeWarning)
-]]>			</system-err>
+	<testsuite name="holiday.tests.PageHitTests-20210629210114" tests="17" file="holiday/tests.py" time="0.498" timestamp="2021-06-29T21:01:14" failures="0" errors="0" skipped="0">
+		<testcase classname="holiday.tests.PageHitTests" name="test_admin_login_view" time="0.088" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="81">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[C:\Users\govin\Desktop\New folder\.env\lib\site-packages\django\db\models\fields\__init__.py:1420: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2018-01-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+C:\Users\govin\Desktop\New folder\.env\lib\site-packages\django\db\models\fields\__init__.py:1420: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-01-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+C:\Users\govin\Desktop\New folder\.env\lib\site-packages\django\db\models\fields\__init__.py:1420: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-01-07 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="48" name="test_admin_text_content" time="0.002" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_admin_text_content" time="0.008" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="48">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="137" name="test_all_city_names" time="0.005" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_all_city_names" time="0.015" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="137">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="29" name="test_create_page" time="0.007" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_create_page" time="0.037" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="29">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="143" name="test_del_holiday_name" time="0.004" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_del_holiday_name" time="0.013" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="143">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="39" name="test_holiday_text_content" time="0.003" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_holiday_text_content" time="0.008" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="39">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="23" name="test_holidays_page" time="0.008" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[i was inside
+		<testcase classname="holiday.tests.PageHitTests" name="test_holidays_page" time="0.021" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="23">
+			<system-out><![CDATA[i was inside
 i was inside
 i was inside
-]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="148" name="test_update" time="0.009" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[i was inside
+		<testcase classname="holiday.tests.PageHitTests" name="test_update" time="0.057" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="148">
+			<system-out><![CDATA[i was inside
 i was inside
 i was inside
-]]>			</system-out>
-			<system-err>
-<![CDATA[/home/user/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1423: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2029-11-29 00:00:00) while time zone support is active.
-  RuntimeWarning)
-]]>			</system-err>
+]]></system-out>
+			<system-err><![CDATA[C:\Users\govin\Desktop\New folder\.env\lib\site-packages\django\db\models\fields\__init__.py:1420: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2029-11-29 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="121" name="test_upload_invalid" time="0.006" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_upload_invalid" time="0.025" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="121">
+			<system-out><![CDATA[b'city_name,date,holidayName\nCHENNAI,05/10/2029,A\nHyderabad,07/10/2029,B\nCHENNAI,05/10/2029,C\n'
+['05/10/2029', '07/10/2029', '05/10/2029'] ['chennai', 'hyderabad', 'chennai']
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="129" name="test_upload_invalid_with_cities" time="0.007" timestamp="2021-06-29T13:56:32">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_upload_invalid_with_cities" time="0.017" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="129">
+			<system-out><![CDATA[b'city_name,date,holidayName\nCHENNAI,05/10/2019,A\nHyderabad,07/10/2019,B\nCHENNAI,05/10/2019,C\nBanglore,06/10/2019,D\n'
+['05/10/2019', '07/10/2019', '05/10/2019', '06/10/2019'] ['chennai', 'hyderabad', 'chennai', 'banglore']
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="113" name="test_valid" time="0.006" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[['CHENNAI', '30/10/2019', 'A']
+		<testcase classname="holiday.tests.PageHitTests" name="test_valid" time="0.064" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="113">
+			<system-out><![CDATA[b'city_name,date,holidayName\nCHENNAI,30/10/2019,A\nHyderabad,30/10/2019,B\nCHENNAI,30/10/2019,C\n'
+['30/10/2019', '30/10/2019', '30/10/2019'] ['chennai', 'hyderabad', 'chennai']
+Checking passed
+['CHENNAI', '30/10/2019', 'A']
 ['Hyderabad', '30/10/2019', 'B']
 ['CHENNAI', '30/10/2019', 'C']
-]]>			</system-out>
-			<system-err>
-<![CDATA[/home/user/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1423: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-10-30 00:00:00) while time zone support is active.
-  RuntimeWarning)
-]]>			</system-err>
+]]></system-out>
+			<system-err><![CDATA[C:\Users\govin\Desktop\New folder\.env\lib\site-packages\django\db\models\fields\__init__.py:1420: RuntimeWarning: DateTimeField Holiday.date received a naive datetime (2019-10-30 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="98" name="test_view_create" time="0.004" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_create" time="0.029" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="98">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="106" name="test_view_create_with_past_date" time="0.004" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_create_with_past_date" time="0.020" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="106">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="88" name="test_view_daily" time="0.005" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[i was inside
-]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_daily" time="0.026" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="88">
+			<system-out><![CDATA[i was inside
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="55" name="test_view_list_all_holidays" time="0.004" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[i was inside
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_list_all_holidays" time="0.023" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="55">
+			<system-out><![CDATA[i was inside
 i was inside
 i was inside
-]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="63" name="test_view_monthly" time="0.004" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_monthly" time="0.027" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="63">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="74" name="test_view_monthly_with_no_result" time="0.004" timestamp="2021-06-29T13:56:33">
-			<system-out>
-<![CDATA[]]>			</system-out>
-			<system-err>
-<![CDATA[]]>			</system-err>
+		<testcase classname="holiday.tests.PageHitTests" name="test_view_monthly_with_no_result" time="0.021" timestamp="2021-06-29T21:01:14" file="holiday\tests.py" line="74">
+			<system-out><![CDATA[]]></system-out>
+			<system-err><![CDATA[]]></system-err>
 		</testcase>
 	</testsuite>
 </testsuites>

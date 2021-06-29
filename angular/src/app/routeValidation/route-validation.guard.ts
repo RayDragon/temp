@@ -20,8 +20,9 @@ export class RouteValidationGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
-    return null;
+      return true;
+      if(this.holidayServiceObj.isAuthenticated) return true;
+    this.route.navigateByUrl('/');
   }
 
 }

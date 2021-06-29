@@ -19,7 +19,7 @@ def check_date(tmp_file):
 			citycontent = list(row[j] for j in included_cols_city)
 			date_content.append(content[0])
 			city_content.append(citycontent[0].lower())
-	
+		print(date_content, city_content)
 		#get the current date and extract month and year
 		today = dt.date(2019,11,25)
 		current_month = today.month
@@ -35,6 +35,8 @@ def check_date(tmp_file):
 	
 
 		city_flag = 0
+		print(db_city_content)
+		print([{x, x in db_city_content} for x in city_content])
 		if(all(x in db_city_content for x in city_content)):
 			city_flag = 1
 		
@@ -50,7 +52,7 @@ def check_date(tmp_file):
 
 		
 		
-		
+		print(upload_flag, city_flag)
 		if city_flag == 1 and upload_flag == 1:
 			return 1
 		else:
