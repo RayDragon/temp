@@ -67,7 +67,9 @@ class UploadCreateView(generics.CreateAPIView):
     data = request.FILES['file'].read()
     tempFile.write(data)
     tempFile.close()
+    print(data)
     if check_date('temp.csv') == 1:
+      print("Checking passed")
       fileData = data.decode('utf-8').split('\n')[1:] 
       for row in fileData:
         h = Holiday()
@@ -111,8 +113,9 @@ class MonthlyHolidayView(generics.CreateAPIView):
 from .models import Admin
 class AdminLoginView(generics.CreateAPIView):
   def post(self, request):
-    a = Admin.objects.filter(**request.data.dict())
+    a = Admin.objects.filter(admin_email=request.data['admin_email'], password=request.data['password'])
     # print(a, request.data.dict())
+    # print(, a, Admin.objects.all()[0].admin_email)
     if len(a)==0:
       return Response({"message":"No admin with provided email"})
     return Response({"status": 1})
