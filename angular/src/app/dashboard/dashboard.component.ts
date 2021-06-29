@@ -47,9 +47,8 @@ export class DashboardComponent implements OnInit {
    */
   ngOnInit() {
     let date = new Date();
-    this.monthIndex = date.getMonth();
-    this.year = date.getFullYear();
-    this.getCities();
+    this.monthIndex = date.get
+
   }
 
   /**
@@ -58,7 +57,7 @@ export class DashboardComponent implements OnInit {
    *  if "flag" is 1 which means that user click right arrow key ->
    */
   navigationArrowMonth(flag) {
-    this.monthIndex += [-1, 1][flag];
+
   
   }
 
@@ -68,7 +67,7 @@ export class DashboardComponent implements OnInit {
    *  if "flag" is 1 which means that user onclick right arrow key ->
    */
   navigationArrowYear(flag) {
-    this.year += [-1, 1][flag];
+ 
   }
 
   /**
@@ -96,30 +95,20 @@ export class DashboardComponent implements OnInit {
    * After dialog close upload the file and update holiday view component using monthComponentNotify() in HolidayService
    */
   uploadDialog() {
-    let ref = this.dialog.open(UploadDialogComponent, {width: '500px'});
-    ref.afterClosed().subscribe(
-      data=>{
-        if(data!=undefined) {
-          this.holidayServiceObj.uploadFile(data).subscribe(x=>{
-            this.holidayServiceObj.monthComponentNotify();
-          })
-        }
-      }
-    )
+ 
 
   }
 
   // Get cities list and assign the response value to cities
   getCities() {
-    this.holidayServiceObj.getCities().subscribe((cities:any)=>{
-      this.cities = cities;
-    })
+
   }
 
   // signOut
   signOut() {
-    this.holidayServiceObj.signOut();
+
   }
 
 
 }
+//https://git-rba.hackerrank.com/git/a845c6b3-0d67-45ed-92a6-2dfa43dd840a
