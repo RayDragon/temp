@@ -21,7 +21,14 @@
                     <mat-form-field appearance="outline">
                         <mat-label>User Name</mat-label>
                         <input matInput id="userName">
-
+                        <mat-error *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+                          <ng-container *ngIf="userName.errors?.required">
+                            Enter username
+                          </ng-container>
+                          <ng-container *ngIf="userName.errors?.email">
+                            Invalid username
+                          </ng-container>
+                        </mat-error>
                         <!--
                               Display error message
                               Use mat-error tag
@@ -31,10 +38,6 @@
                                 1. Display error message "Enter username" if the field is empty
                                 2. Display error message "Invalid username" if the username is invalid
                             -->
-                        <mat-error>
-
-                        </mat-error>
-
                     </mat-form-field>
 
                     <!-- Password field -->
@@ -53,8 +56,8 @@
                                ** Error Message **
                                 1. Display error message "Enter password" if the field is empty
                             -->
-                        <mat-error>
-
+                        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+                          Enter Password
                         </mat-error>
                     </mat-form-field>
                 </mat-card-content>
@@ -64,7 +67,7 @@
                         Disable button when the form is invalid
                         when button click should call validate()
                     -->
-                    <button mat-raised-button color="primary" id="signInBtn">Sign in</button>
+                    <button mat-raised-button color="primary" [disabled]="signInForm.invalid" (click)="validate()" id="signInBtn">Sign in</button>
 
                 </mat-card-actions>
 

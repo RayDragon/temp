@@ -56,7 +56,7 @@ export class HolidayService {
    * Use the URL 'api/admin/login/'
    */
   signIn(username: string, password: string): Observable<any> {
-    return null;
+    return this.http.post('api/admin/login', {admin_email: username, password}, this.httpOptions);
   }
 
   /**
@@ -64,7 +64,7 @@ export class HolidayService {
    * Navigate to signIn page
    */
   signOut() {
-
+    this.route.navigateByUrl('/');
 
   }
 
@@ -85,8 +85,7 @@ export class HolidayService {
    * Use the URL 'api/cities/'
    */
   getCities(): Observable<any> {
-
-    return null;
+    return this.http.get('api/cities/');
   }
 
   // **************** Holiday View **************** //
@@ -97,8 +96,7 @@ export class HolidayService {
    * Use the URL 'api/monthly/'
    */
   getHolidays(city: string, monthIndex: number, year: number): Observable<any> {
-
-    return null;
+    return this.http.post('api/monthly', {city_name: city, month: monthIndex, year});
   }
 
 
@@ -110,8 +108,7 @@ export class HolidayService {
    * Use the URL 'api/daily/'
    */
   getSelectedHolidayInfo(date: string, city: string): Observable<any> {
-   
-    return null;
+    return this.http.post('api/daily/', {date, city}, this.httpOptions);
   }
 
   /**
@@ -120,8 +117,7 @@ export class HolidayService {
    * Use the URL 'api/create/'
    */
   addHoliday(date: string, city: string, holidayName: string): Observable<any> {
-   
-    return null;
+    return this.http.post('api/create', {date, city_name:city, holidayName}, this.httpOptions);
   }
 
   /**
@@ -130,8 +126,7 @@ export class HolidayService {
    * Use the URL 'api/updateholidayinfo/:id/'.:id -> holiday id
    */
   updateHoliday(id: any, date: string, city: string, holidayName: string): Observable<any> {
-    
-    return null;
+    return this.http.post(`api/updateholidayinfo/${id}/`, {date, city_name: city, holidayName}, this.httpOptions);
   }
 
 
@@ -141,7 +136,7 @@ export class HolidayService {
    * Use the URL 'api/deleteholidayinfo/:id/'. :id -> holiday id
    */
   removeHoliday(id: any): Observable<any> {
-    return null;
+    return this.http.delete(`api/deleteholidayinfo/${id}/`);
   }
 
   // **************** Upload **************** //
@@ -153,8 +148,9 @@ export class HolidayService {
    */
 
   uploadFile(file: File): Observable<any> {
-    
-    return null;
+    let fd = new FormData();
+    fd.append('file', file, file.name);
+    return this.http.post('api/upload', fd);
   }
 
 }

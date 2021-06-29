@@ -17,7 +17,7 @@
                 <!-- 
                     On click should call navigationArrowMonth
                 -->
-                <button mat-icon-button id="leftMonthKey" aria-label="left naviage" >
+                <button mat-icon-button id="leftMonthKey" aria-label="left naviage" (click)="navigationArrowMonth(0)">
                     <mat-icon>keyboard_arrow_left
                     </mat-icon>
                 </button>
@@ -33,7 +33,7 @@
                     On click should call navigationArrowMonth
                     disable when reaches limit
                 -->
-                <button mat-icon-button id="rightMonthKey" aria-label="right naviage" >
+                <button mat-icon-button id="rightMonthKey" aria-label="right naviage" (click)="navigationArrowMonth(1)" >
                     <mat-icon>keyboard_arrow_right
                     </mat-icon>
                 </button>
@@ -50,7 +50,7 @@
                     </mat-icon>
                 </button>
 
-                <div id="yearValue" class="nameArrage" style="width: 80px;">
+                <div id="yearValue" class="nameArrage" style="width: 80px;" (click)="navigationArrowYear(0)">
                     <!-- 
                         Display year 
                      -->
@@ -61,7 +61,7 @@
                     On click should call navigationArrowYear
                     disable when reaches limit
                 -->
-                <button id="rightYearKey" mat-icon-button aria-label="right naviage" >
+                <button id="rightYearKey" mat-icon-button aria-label="right naviage" (click)="navigationArrowYear(1)">
                     <mat-icon>keyboard_arrow_right
                     </mat-icon>
                 </button>

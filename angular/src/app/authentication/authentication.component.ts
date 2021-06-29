@@ -23,7 +23,16 @@ export class AuthenticationComponent implements OnInit {
   constructor(private holidayServiceObj: HolidayService, private snackBar: MatSnackBar, private route: Router, ) { }
 
   ngOnInit() {
+    this.signInForm = new FormGroup({
+      userName: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl('', [Validators.required])
+    });
   }
+  get userName(){
+    return this.signInForm.get('userName');
+  }
+  get password() {return this.signInForm.get('password');}
+
 
   /**
    * On click signIn button should call validate()
@@ -32,6 +41,7 @@ export class AuthenticationComponent implements OnInit {
    * Otherwise display "Invalid password" using snackbar
    */
   validate() {
+    this.holidayServiceObj.signIn(this.userName.value, this.password.value);
 
   }
 
