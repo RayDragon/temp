@@ -1,0 +1,9 @@
+Django==2.2.5
+django-collectionfield==0.0.4
+djangorestframework==3.10.3
+jsonfield==2.0.2
+python-dateutil==2.8.1
+pytz==2019.2
+six==1.13.0
+sqlparse==0.3.0
+unittest-xml-reporting==2.5.1
