@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite errors="0" failures="0" file="holiday/tests.py" name="holiday.tests.PageHitTests-20210629135632" skipped="0" tests="17" time="0.094" timestamp="2021-06-29T13:56:33">
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="81" name="test_admin_login_view" time="0.012" timestamp="2021-06-29T13:56:32">
+	<testsuite errors="0" failures="0" file="holiday/tests.py" name="holiday.tests.PageHitTests-20210629143238" skipped="0" tests="17" time="0.099" timestamp="2021-06-29T14:32:38">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="81" name="test_admin_login_view" time="0.013" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
@@ -13,37 +13,37 @@
   RuntimeWarning)
 ]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="48" name="test_admin_text_content" time="0.002" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="48" name="test_admin_text_content" time="0.003" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="137" name="test_all_city_names" time="0.005" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="137" name="test_all_city_names" time="0.006" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="29" name="test_create_page" time="0.007" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="29" name="test_create_page" time="0.007" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="143" name="test_del_holiday_name" time="0.004" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="143" name="test_del_holiday_name" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="39" name="test_holiday_text_content" time="0.003" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="39" name="test_holiday_text_content" time="0.003" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="23" name="test_holidays_page" time="0.008" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="23" name="test_holidays_page" time="0.006" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[i was inside
 i was inside
@@ -52,7 +52,7 @@ i was inside
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="148" name="test_update" time="0.009" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="148" name="test_update" time="0.011" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[i was inside
 i was inside
@@ -63,19 +63,19 @@ i was inside
   RuntimeWarning)
 ]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="121" name="test_upload_invalid" time="0.006" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="121" name="test_upload_invalid" time="0.006" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="129" name="test_upload_invalid_with_cities" time="0.007" timestamp="2021-06-29T13:56:32">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="129" name="test_upload_invalid_with_cities" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="113" name="test_valid" time="0.006" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="113" name="test_valid" time="0.006" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[['CHENNAI', '30/10/2019', 'A']
 ['Hyderabad', '30/10/2019', 'B']
@@ -86,26 +86,26 @@ i was inside
   RuntimeWarning)
 ]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="98" name="test_view_create" time="0.004" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="98" name="test_view_create" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="106" name="test_view_create_with_past_date" time="0.004" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="106" name="test_view_create_with_past_date" time="0.004" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="88" name="test_view_daily" time="0.005" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="88" name="test_view_daily" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[i was inside
 ]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="55" name="test_view_list_all_holidays" time="0.004" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="55" name="test_view_list_all_holidays" time="0.004" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[i was inside
 i was inside
@@ -114,13 +114,13 @@ i was inside
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="63" name="test_view_monthly" time="0.004" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="63" name="test_view_monthly" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
 <![CDATA[]]>			</system-err>
 		</testcase>
-		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="74" name="test_view_monthly_with_no_result" time="0.004" timestamp="2021-06-29T13:56:33">
+		<testcase classname="holiday.tests.PageHitTests" file="holiday/tests.py" line="74" name="test_view_monthly_with_no_result" time="0.005" timestamp="2021-06-29T14:32:38">
 			<system-out>
 <![CDATA[]]>			</system-out>
 			<system-err>
