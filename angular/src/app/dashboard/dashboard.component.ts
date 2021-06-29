@@ -59,7 +59,13 @@ export class DashboardComponent implements OnInit {
    */
   navigationArrowMonth(flag) {
     this.monthIndex += [-1, 1][flag];
-  
+    if(this.monthIndex > 11) {
+      this.monthIndex = 0;
+      this.year += 1; 
+    } else if (this.monthIndex < 0) {
+      this.monthIndex = 11;
+      this.year -=1;
+    }
   }
 
   /**
@@ -77,8 +83,10 @@ export class DashboardComponent implements OnInit {
    * Return false to enable
    */
   monthNavigatorValidation() {
-  
-    return null;
+    let currentDate = new Date();
+    if(this.year < currentDate.getFullYear()) return false;
+    else if(this.monthIndex < currentDate.getMonth()) return false;
+    return true;
   }
 
   /**
@@ -87,8 +95,9 @@ export class DashboardComponent implements OnInit {
    * return false to enable
    */
   yearNavigatorValidation() {
-
-    return null;
+    let currentDate = new Date();
+    if(this.year < currentDate.getFullYear()) return false;
+    return true;
   }
 
   /**

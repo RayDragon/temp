@@ -90,7 +90,7 @@ class UploadCreateView(generics.CreateAPIView):
 
 class MonthlyHolidayView(generics.CreateAPIView):
   def post(self, request):
-    data = request.data.dict()
+    data = request.data
     city = Holiday.objects.filter(city_name=data['city_name'])
     cities = []
     for x in city:
@@ -124,13 +124,15 @@ class AdminLoginView(generics.CreateAPIView):
 from .serializers import DailySerializer
 class DailyHolidayView(generics.CreateAPIView):
   def post(self, request):
-    data = request.data.dict()
+    data = request.data
     city = Holiday.objects.filter(city_name=data['city_name'])
-    cities = []
+    # print(data, city, list(map(lambda x: str(x.date) + " " + str(x.city_name), Holiday.objects.all())))
     for x in city:
-      d = x.date
+      # d = x.date
       if x.date.strftime('%d/%m/%Y') == data['date']:
         return Response(DailySerializer(x).data)
+      else:
+        print(x.date.strftime('%d/%m/%Y'), data['date'])
         #cities.append(x)
     return Response({})
 #Method to add a holiday to the list
@@ -138,11 +140,15 @@ class DailyHolidayView(generics.CreateAPIView):
 class HolidayCreateView(generics.CreateAPIView):
   def post(self, request):
     try:
-      data = dict(request.data.dict())
+      data = {
+        'date': request.data.get('date'),
+        'city_name': request.data.get('city_name'),
+        'holidayName': request.data.get('holidayName')
+      }
       if datetime.strptime(data['date'], '%Y-%m-%d') < datetime.now().today():
         return Response({"date":["Date cannot be in the past"]}, status=400)
       data['date'] = datetime.strptime(data['date'], '%Y-%m-%d').replace(tzinfo=pytz.UTC)
-      holiday = Holiday(**data)
+      holiday = Holiday(date=data['date'], holidayName=data['holidayName'], city_name=data['city_name'])
       holiday.save()
       # print("Holiday Create View Success")
       return Response({'status': 1})

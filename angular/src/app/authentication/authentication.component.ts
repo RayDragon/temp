@@ -41,10 +41,12 @@ export class AuthenticationComponent implements OnInit {
    * Otherwise display "Invalid password" using snackbar
    */
   validate() {
-    console.log(this.userName, this.password);
     this.holidayServiceObj.signIn(this.userName.value, this.password.value)
       .subscribe(x=>{
-        if(x.status == 1) return this.route.navigateByUrl('dashboard');
+        if(x.status == 1) {
+          this.holidayServiceObj.isAuthenticated = true;
+          return this.route.navigateByUrl('dashboard');
+        }
         return this.snackBar.open("Invalid password");
       });
   }

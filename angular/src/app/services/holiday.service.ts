@@ -39,7 +39,7 @@ export class HolidayService {
 
   // to send selected date from holiday-view component to holiday-editor component
   sendUserSelectedDateId(date) {
-
+    this.userDateSelection.next(date);
   }
 
   // to notify holiday-view component.Use monthViewUpdate 
@@ -57,7 +57,6 @@ export class HolidayService {
    */
   signIn(username: string, password: string): Observable<any> {
     let x = this.http.post('api/admin/login/', {admin_email: username, password}, this.httpOptions);
-    x.subscribe((data:any)=>{if(data.status == 1) this.isAuthenticated = true});
     return x;
   }
 
@@ -100,7 +99,7 @@ export class HolidayService {
    * Use the URL 'api/monthly/'
    */
   getHolidays(city: string, monthIndex: number, year: number): Observable<any> {
-    return this.http.post('api/monthly', {city_name: city, month: monthIndex, year});
+    return this.http.post('api/monthly/', {city_name: city, month: monthIndex+1, year});
   }
 
 
@@ -112,7 +111,7 @@ export class HolidayService {
    * Use the URL 'api/daily/'
    */
   getSelectedHolidayInfo(date: string, city: string): Observable<any> {
-    return this.http.post('api/daily/', {date, city}, this.httpOptions);
+    return this.http.post('api/daily/', {date: date.split('/').reverse().join('-'), city_name: city}, this.httpOptions);
   }
 
   /**
@@ -121,7 +120,7 @@ export class HolidayService {
    * Use the URL 'api/create/'
    */
   addHoliday(date: string, city: string, holidayName: string): Observable<any> {
-    return this.http.post('api/create', {date, city_name:city, holidayName}, this.httpOptions);
+    return this.http.post('api/create/', {date, city_name:city, holidayName}, this.httpOptions);
   }
 
   /**
@@ -130,7 +129,7 @@ export class HolidayService {
    * Use the URL 'api/updateholidayinfo/:id/'.:id -> holiday id
    */
   updateHoliday(id: any, date: string, city: string, holidayName: string): Observable<any> {
-    return this.http.post(`api/updateholidayinfo/${id}/`, {date, city_name: city, holidayName}, this.httpOptions);
+    return this.http.put(`api/updateholidayinfo/${id}/`, {date, city_name: city, holidayName}, this.httpOptions);
   }
 
 

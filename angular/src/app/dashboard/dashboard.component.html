@@ -17,7 +17,7 @@
                 <!-- 
                     On click should call navigationArrowMonth
                 -->
-                <button mat-icon-button id="leftMonthKey" [disabled]="monthIndex == 0" aria-label="left naviage" (click)="navigationArrowMonth(0)">
+                <button mat-icon-button id="leftMonthKey"  aria-label="left naviage" (click)="navigationArrowMonth(0)">
                     <mat-icon>keyboard_arrow_left
                     </mat-icon>
                 </button>
@@ -34,7 +34,7 @@
                     On click should call navigationArrowMonth
                     disable when reaches limit
                 -->
-                <button mat-icon-button id="rightMonthKey" [disabled]="monthIndex == 11" aria-label="right naviage" (click)="navigationArrowMonth(1)" >
+                <button mat-icon-button id="rightMonthKey" aria-label="right naviage" (click)="navigationArrowMonth(1)" >
                     <mat-icon>keyboard_arrow_right
                     </mat-icon>
                 </button>
@@ -63,7 +63,7 @@
                     On click should call navigationArrowYear
                     disable when reaches limit
                 -->
-                <button id="rightYearKey" mat-icon-button aria-label="right naviage" (click)="navigationArrowYear(1)">
+                <button id="rightYearKey" mat-icon-button aria-label="right naviage" (click)="navigationArrowYear(1)" [disabled]="monthIndex==11">
                     <mat-icon>keyboard_arrow_right
                     </mat-icon>
                 </button>
@@ -84,7 +84,7 @@
                                 The selected city should be assigned to "selectedCity" variable 
                             -->
                         <mat-select id="cityDropDown" placeholder="Select" [(ngModel)]="selectedCity">
-                            <mat-option *ngFor="let city of cities" value="city.cityName">{{city.cityName}}</mat-option>
+                            <mat-option *ngFor="let city of cities" [value]="city.cityName">{{city.cityName}}</mat-option>
                         </mat-select>
 
                     </mat-form-field>

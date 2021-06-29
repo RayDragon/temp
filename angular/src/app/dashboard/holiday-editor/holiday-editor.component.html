@@ -1,7 +1,7 @@
 <div style="width: 100%;">
     <div class="mat-h1" style="text-align: center;">
         <span> Holiday editor</span>
-        <br> {{selectedDate}}
+        <br> {{selectedDate}} {{city}}
     </div>
 
     <mat-card class="editorCard" *ngIf="editorFlag">
@@ -11,7 +11,7 @@
                 <mat-form-field appearance="outline" [style.fontSize.px]="15">
 
                     <mat-label>Holiday Name</mat-label>
-                    <input matInput id='holidayName'>
+                    <input matInput id='holidayName' formControlName="holidayName">
                     <!--
                               Display error message here
                               Use mat-error tag
@@ -21,8 +21,15 @@
                                 1. Display error message "Enter HolidayName" if the field is empty
                                 2. Display error message "Holiday name should contain only alphabets" if the HolidayName is invalid
                             -->
-                    <mat-error>
-                    </mat-error>
+                    <mat-error *ngIf="holidayName.errors && (holidayName.dirty || holidayName.touched)">
+                            <ng-container *ngIf="holidayName.errors?.required">
+                                Enter HolidayName
+                            </ng-container>
+                            <ng-container *ngIf="holidayName.errors?.pattern">
+                                Holiday name should contain only alphabets
+                            </ng-container>
+
+                        </mat-error>
                 </mat-form-field>
 
 
@@ -34,18 +41,30 @@
                         Disable button when the form is invalid
                         when button click should call addHoliday()
                     -->
-                <button  class="btnWidth" mat-flat-button color="primary">Add</button>
+                <button  class="btnWidth"
+                 mat-flat-button 
+                 *ngIf="!holidayObj?.id"
+                 [disabled]="holidayEditor.invalid"
+                 (click)="addHoliday()"
+                 color="primary">Add</button>
                 <!-- 
                         Display Save button if holiday exists 
                         Disable button when the form is invalid
                         when button click should call updateHoliday()
                     -->
-                <button  class="btnWidth" mat-flat-button color="primary" >Save</button>
+                <button 
+                *ngIf="holidayObj?.id"
+                [disabled]="holidayEditor.invalid"
+                (click)="updateHoliday()"
+                class="btnWidth" mat-flat-button color="primary" >Save</button>
                 <!-- 
                         Display Remove button if holiday exists 
                         when button click should call removeHoliday()
                     -->
-                <button  class="btnWidth" mat-stroked-button color="accent" >Remove</button>
+                <button
+                *ngIf="holidayObj?.id"
+                (click)="removeHoliday()"
+                class="btnWidth" mat-stroked-button color="accent" >Remove</button>
 
             </mat-card-actions>
         </form>
