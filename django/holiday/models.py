@@ -25,3 +25,30 @@ class Admin(models.Model):
 #create a class for Cities table with fields id, cityName
 class Cities(models.Model):
   cityName = models.CharField(max_length=50)
+
+try:
+  Cities.objects.create(id=1, cityName='Hyderabad')
+except Exception as e:
+  print("Error creating initial data")
+  print(e)
+ 
+try:
+  Cities.objects.create(id=2, cityName='Chennai')
+except Exception as e:
+  print("Error creating initial data")
+  print(e)
+ 
+
+try:
+  Cities.objects.create(id=3, cityName='Pune')
+except Exception as e:
+  print("Error creating initial data")
+  print(e)
+ 
+
+try:
+  Admin.objects.create(id=1, admin_name="test", admin_email="test@admin.com", password="password")
+except Exception as e:
+  print("Error creating initial data")
+  print(e)
+  

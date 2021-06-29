@@ -2,6 +2,9 @@
     <!--
         Calendar Header
     -->
+    <div class="week mat-h3" *ngFor="let week of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']">
+        {{week}}
+    </div>
     <!--
        Each header should contain two css class
             1. week
@@ -34,5 +37,10 @@
     <!-- 
         Note: do not use Table tag.
     -->
+    <div class="tr-row" *ngFor="let row of [0,1,2,3,4,5]">
+        <div class="td-month" *ngFor="let col of [0,1,2,3,4,5,6]">
+            
+        </div>
+    </div>
 
 </div>

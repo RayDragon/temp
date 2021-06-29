@@ -44,7 +44,7 @@ export class HolidayService {
 
   // to notify holiday-view component.Use monthViewUpdate 
   monthComponentNotify() {
-
+    this.monthViewUpdate.next();
   }
 
   // **************** Authentication **************** //
@@ -56,7 +56,9 @@ export class HolidayService {
    * Use the URL 'api/admin/login/'
    */
   signIn(username: string, password: string): Observable<any> {
-    return this.http.post('api/admin/login', {admin_email: username, password}, this.httpOptions);
+    let x = this.http.post('api/admin/login/', {admin_email: username, password}, this.httpOptions);
+    x.subscribe((data:any)=>{if(data.status == 1) this.isAuthenticated = true});
+    return x;
   }
 
   /**
@@ -64,6 +66,7 @@ export class HolidayService {
    * Navigate to signIn page
    */
   signOut() {
+    this.isAuthenticated = false;
     this.route.navigateByUrl('/');
 
   }
@@ -72,9 +75,10 @@ export class HolidayService {
    * Return true if user credentials are valid and signIn is done
    * or return false if user credentials are invalid
    */
+  isAuthenticated = false;
   authValidator(): boolean {
     
-    return null;
+    return this.isAuthenticated;
   }
 
 
@@ -150,7 +154,7 @@ export class HolidayService {
   uploadFile(file: File): Observable<any> {
     let fd = new FormData();
     fd.append('file', file, file.name);
-    return this.http.post('api/upload', fd);
+    return this.http.post('api/upload/', fd);
   }
 
 }

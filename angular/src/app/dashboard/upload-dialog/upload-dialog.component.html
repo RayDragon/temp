@@ -21,7 +21,7 @@
         on Click #fileDrop div tag should call openFileExplorer()
     -->
 
-    <div class='dragDrop' id='fileDrop' (drop)='fileDrop($event)'>
+    <div class='dragDrop' id='fileDrop' (drop)='fileDrop($event)' *ngIf="!file" (click)="openFileExplorer()">
         <div id='dragOff'>
             <mat-icon class='fileIcon'>insert_drive_file</mat-icon>
             <br> Click here to select the CSV file
@@ -35,7 +35,7 @@
     Display #fileStatusSelected div tag if user selected the file.
     -->
 
-    <div id='fileStatusSelected' mat-h1 style="text-align: center;margin-top:2px;">
+    <div id='fileStatusSelected' mat-h1 style="text-align: center;margin-top:2px;" *ngIf="file" >
         Do you want to upload the file {{file.name}}?
     </div>
 
@@ -45,15 +45,15 @@
     <!-- 
     Display buttons if user selected the file.
    -->
-    <div id="actionBtnsToUpload">
+    <div id="actionBtnsToUpload" *ngIf="file">
         <!--
             If yes, call closeDialog and pass true as parameter
 
             If no, call closeDialog and pass false as parameter
         -->
-        <button mat-flat-button color="primary">Yes</button>
+        <button mat-flat-button color="primary" (click)="closeDialog(true)">Yes</button>
 
-        <button mat-stroked-button color="accent">No</button>
+        <button mat-stroked-button color="accent"  (click)="closeDialog(false)">No</button>
 
     </div>
 

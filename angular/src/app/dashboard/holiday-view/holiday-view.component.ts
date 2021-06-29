@@ -36,6 +36,8 @@ export class HolidayViewComponent implements OnInit, OnChanges {
    * Generate month when year or monthIndex or city change
    */
   ngOnChanges(changes: SimpleChanges): void {
+    // generate dateobj
+    
   }
 
 /**
@@ -46,7 +48,7 @@ export class HolidayViewComponent implements OnInit, OnChanges {
  * and send the selected date to holiday editor using sendUserSelectedDateId function in HolidayService
  */
   ngOnInit() {
- 
+    
   }
 
   /**
@@ -63,7 +65,10 @@ export class HolidayViewComponent implements OnInit, OnChanges {
    * Fetch holiday list and insert into responseDateObjs
    */
   holidayInitializer() {
-  
+    this.holidayServiceObj.getHolidays(this.city, this.monthIndex, this.year)
+      .subscribe(data=>{
+        console.log(data);
+      })
   }
 
 
